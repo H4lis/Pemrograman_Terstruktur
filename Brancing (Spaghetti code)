@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+//Brancing Percabangan Adalah perintah yang memungkinkan pemilihan
+//atas perintah yang akan dijalankan sesuai dengan kondisi tertentu.
+
+int main(){
+	int i = 1;
+	ulang:	while(i<=20){
+		if(i%3==0){ 
+			goto petruk;
+		}else if(i%4==0){
+			goto brancing;
+		}
+		
+		i++;
+	}
+	goto keluar;
+	petruk:
+		cout << i << " Belajar Pemrograman Petruk" << endl;
+		i++;
+		goto ulang;
+	brancing:
+		cout << i << " Belajar Brancing" << endl;
+		i++;
+		goto ulang;
+	keluar:
+		return 0;
+}
