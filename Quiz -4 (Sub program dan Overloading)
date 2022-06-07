@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+void kerja(int n){
+	for (int i=1 ; i<n ; i++){
+		for(int j=1 ; j<= i; j++){
+			cout << "  ";
+		}
+		for(int j=n ; j>i ; j--){
+			cout << "A ";
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
+void kerja(int o, int p){
+	for (int i=1 ; i <= o;i++){
+		for (int j=i ; j<=p ; j++){
+			cout << j << " ";
+		}
+		for (int r=1 ; r<i ; r++){
+			cout << r << " ";
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
+
+int main(){
+	cout << "PROGRAM SEGITIGA" << endl;
+	kerja(7);
+	cout << "PROGRAM KOTAK" << endl;
+	kerja(10,10);	
+}
