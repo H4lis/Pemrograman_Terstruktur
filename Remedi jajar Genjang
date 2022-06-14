@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int baris;
+void kode();
+
+int main(){
+    cout << "Masukkan Batas Baris = "; cin >> baris;
+    kode();
+}
+
+void kode(){
+int n = 1, m = 2, batas = 8;
+
+    int i=1;
+    while(i<=baris){
+        for(int j = 1;j <= i;j++){
+            cout << " ";
+        }
+        if(i % 2 == 1){
+            for(int j = 1;j <= 9;j++){
+                cout << n << " ";
+                if(n == 9)n = -1;
+                n += 2;
+            }
+
+        }
+        if(i % 2 ==0){
+            m = batas;
+            for(int j = 1;j <= 9;j++){
+
+                cout << m << " ";
+                if(m == 8)m = 0;
+                m += 2;
+            }
+            if(m == 2)m = 10;
+
+            batas -=2;
+        }
+
+        cout << endl;
+        i++;
+    }
+}
+
+
